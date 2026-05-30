@@ -138,7 +138,7 @@ cd student-burnout-predictor
 Replace:
 
 ```text
-YOUR_USERNAME
+SahilPednekar12
 ```
 
 with your GitHub username.
