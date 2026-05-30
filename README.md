@@ -1,35 +1,33 @@
 # 🎓 Student Burnout Prediction System
 
-An AI-powered Machine Learning web application that predicts student stress levels based on academic and lifestyle factors.
-
-Built using **React.js**, **Flask**, and **Scikit-Learn**.
+A full-stack Machine Learning application that predicts student stress levels using academic and lifestyle factors. The project uses a Random Forest Classifier trained with Scikit-Learn, deployed through a Flask REST API, and integrated with a modern React.js frontend for real-time predictions.
 
 ---
 
 ## 🚀 Features
 
-- Predict student stress levels using Machine Learning
-- Modern React Frontend UI
-- Flask REST API Backend
-- Random Forest Classifier
-- Real-time predictions
-- Responsive Design
-- Interactive Dashboard
-- Trained ML Model (.pkl)
+- Machine Learning-based stress prediction
+- Full-stack architecture using React and Flask
+- Real-time prediction system
+- Modern and responsive dashboard UI
+- Random Forest Classification Model
+- REST API integration
+- Trained model deployment using Pickle (.pkl)
+- Interactive user experience
 
 ---
 
 ## 📊 Input Parameters
 
-The model predicts stress level using:
+The model predicts student stress levels using the following factors:
 
 | Feature | Description |
 |----------|------------|
 | Sleep Hours | Average daily sleep hours |
 | Assignment Count | Number of assignments |
 | Screen Time Hours | Daily screen usage |
-| Attendance Percentage | Student attendance |
-| Study Hours | Daily study time |
+| Attendance Percentage | Student attendance percentage |
+| Study Hours | Daily study duration |
 | Social Media Usage Hours | Daily social media usage |
 | Burnout Score | Overall burnout score |
 
@@ -50,7 +48,7 @@ Model Evaluation
    ↓
 Model Saved (.pkl)
    ↓
-Flask API
+Flask REST API
    ↓
 React Frontend
 ```
@@ -67,14 +65,17 @@ student-burnout-predictor/
 │   ├── train_model.py
 │   ├── burnout_model.pkl
 │   ├── label_encoder.pkl
-│   └── burnout_dataset.csv
+│   ├── burnout_dataset.csv
+│   └── requirements.txt
 │
 ├── frontend/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
 │   │   ├── pages/
+│   │   │   └── Home.js
 │   │   ├── styles/
+│   │   │   └── Home.css
 │   │   ├── App.js
 │   │   └── index.js
 │   │
@@ -111,6 +112,19 @@ student-burnout-predictor/
 
 ---
 
+## 🎯 Model Information
+
+| Property | Value |
+|-----------|---------|
+| Algorithm | Random Forest Classifier |
+| Type | Supervised Machine Learning |
+| Problem Type | Multi-Class Classification |
+| Target Variable | Stress Level |
+| Output Classes | Low, Medium, High |
+| Deployment | Flask REST API |
+
+---
+
 ## ⚙️ Installation
 
 ### Clone Repository
@@ -121,25 +135,43 @@ git clone https://github.com/SahilPednekar12/student-burnout-predictor.git
 cd student-burnout-predictor
 ```
 
+Replace:
+
+```text
+YOUR_USERNAME
+```
+
+with your GitHub username.
+
 ---
 
-### Backend Setup
+## 🔧 Backend Setup
+
+Move to backend folder:
 
 ```bash
 cd backend
+```
 
+Install dependencies:
+
+```bash
 pip install flask flask-cors pandas numpy scikit-learn joblib
+```
 
+Train the model:
+
+```bash
 python train_model.py
 ```
 
-Run Backend:
+Run Flask server:
 
 ```bash
 python app.py
 ```
 
-Backend will run on:
+Backend runs on:
 
 ```text
 http://127.0.0.1:5000
@@ -147,17 +179,27 @@ http://127.0.0.1:5000
 
 ---
 
-### Frontend Setup
+## 💻 Frontend Setup
+
+Move to frontend folder:
 
 ```bash
 cd frontend
+```
 
+Install dependencies:
+
+```bash
 npm install
+```
 
+Run React application:
+
+```bash
 npm start
 ```
 
-Frontend will run on:
+Frontend runs on:
 
 ```text
 http://localhost:3000
@@ -167,10 +209,12 @@ http://localhost:3000
 
 ## 🔌 API Endpoint
 
-### Predict Stress Level
+### Predict Student Stress Level
+
+**POST**
 
 ```http
-POST /predict
+/predict
 ```
 
 ### Request Body
@@ -197,13 +241,14 @@ POST /predict
 
 ---
 
-## 🎯 Model Information
+## 📈 Use Cases
 
-| Algorithm | Random Forest Classifier |
-|------------|------------------------|
-| Problem Type | Multi-Class Classification |
-| Target Variable | Stress Level |
-| Output Classes | Low, Medium, High |
+- Student Wellness Monitoring
+- Academic Performance Analysis
+- Burnout Risk Assessment
+- Educational Analytics
+- Student Support Systems
+- Research Projects in Machine Learning
 
 ---
 
@@ -211,7 +256,7 @@ POST /predict
 
 ### Dashboard
 
-Add your UI screenshot here
+Add your dashboard screenshot here:
 
 ```text
 screenshots/dashboard.png
@@ -219,10 +264,10 @@ screenshots/dashboard.png
 
 ### Prediction Result
 
-Add prediction result screenshot here
+Add your prediction screenshot here:
 
 ```text
-screenshots/result.png
+screenshots/prediction-result.png
 ```
 
 ---
@@ -230,11 +275,12 @@ screenshots/result.png
 ## 🔮 Future Enhancements
 
 - User Authentication
-- Prediction History
+- Prediction History Tracking
 - PDF Report Generation
-- Data Visualization Dashboard
-- AI-Based Recommendations
+- Interactive Data Visualizations
+- Personalized Stress Management Recommendations
 - Cloud Deployment
+- Admin Dashboard
 
 ---
 
@@ -242,7 +288,7 @@ screenshots/result.png
 
 **Sahil Pednekar**
 
-Machine Learning | React | Flask | Full Stack Development
+Machine Learning | React.js | Flask | Full Stack Development
 
 ---
 
@@ -250,14 +296,14 @@ Machine Learning | React | Flask | Full Stack Development
 
 If you found this project useful:
 
-⭐ Star the repository
-
-🍴 Fork the repository
-
-📢 Share with others
+- ⭐ Star the repository
+- 🍴 Fork the repository
+- 📢 Share the project
 
 ---
 
 ## 📜 License
 
 This project is licensed under the MIT License.
+
+Feel free to use and modify it for learning and educational purposes.
