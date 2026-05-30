@@ -240,7 +240,7 @@ screenshots/result.png
 
 ## 👨‍💻 Author
 
-**CodeKing**
+**Sahil Pednekar**
 
 Machine Learning | React | Flask | Full Stack Development
 
